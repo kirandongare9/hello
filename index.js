@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 
-let port = 2851 || $PORT;
+let port = process.env.PORT || 2851;
 app.use('/resources',express.static('resources'));
 
 app.get('/' , function(req,res) {
